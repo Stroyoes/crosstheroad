@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files (if any)
+.env
+.env.*.local
+
+# Vite cache
+.vite/
+
+# MacOS and system files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Optional: OS Trash
+.Trash-*
+
+# Optional: Editor swap/backup files
+*.swp
+*~
+
