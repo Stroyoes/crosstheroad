@@ -3,7 +3,7 @@ import { tileSize } from "../constants";
 
 export function Tree(tileIndex, height) {
     const tree = new THREE.Group();
-    tree.position.set(tileIndex * tileSize);
+    tree.position.set(tileIndex * tileSize, -25, 25);
 
     const trunk = new THREE.Mesh(
         new THREE.BoxGeometry(15, 15, 20),
