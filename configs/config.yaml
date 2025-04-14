@@ -4,6 +4,9 @@ game:
   defaultLevel: 1 
   maxLevels: 3 
 
+logger: # Log levels in order: DEBUG < INFO < WARN < ERROR < FATAL
+  mode: "dev"  # Set to "dev" for DEBUG+, "user" for INFO+
+
 player:
   color: "white"
   speed: 5 
