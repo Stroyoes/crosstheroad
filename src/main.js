@@ -26,13 +26,11 @@ const camera = Camera();
 player.add(camera);
 
 const scoreDOM = document.getElementById("score");
-const resultDOM = document.getElementById("result-container");
+const resultDOM = document.getElementById("result-body");
 
 initializeGame();
 
-document
-  .querySelector("#retry")
-  ?.addEventListener("click", initializeGame);
+document.querySelector("#retry")?.addEventListener("click", initializeGame);  
 
 function initializeGame() {
   initializePlayer();
@@ -40,7 +38,7 @@ function initializeGame() {
 
   // initialize UI
   if (scoreDOM) scoreDOM.innerText = "0";
-  if (resultDOM) resultDOM.style.visibility = "hieedem"
+  if (resultDOM) resultDOM.style.visibility = "hidden";
 }
 
 const renderer = Renderer();
