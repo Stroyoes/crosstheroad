@@ -1,0 +1,38 @@
+game:
+  title: "crosstheroad"
+  version: "1.0"
+  defaultLevel: 1 
+  maxLevels: 3 
+
+player:
+  color: "white"
+  speed: 5 
+
+road:
+  lanes: 3
+  trafficSpeed: 2
+  vehicleSpawnRate: 1.5 # seconds
+
+levels:
+  - id: 1 
+    name: "The beginning is easy"
+    color: "yellow"
+    trafficSpeed: 1.5
+    vehicleSpawnRate: 2
+    maxPowerUps: 3
+
+  - id: 2
+    name: "Its getting tough"
+    color: "cyan"
+    trafficSpeed: 2.5
+    vehicleSpawnRate: 1.5
+    maxPowerUps: 2 
+
+  - id: 3 
+    name: "Its difficult"
+    color: "magenta"
+    trafficSpeed: 3.5
+    vehicleSpawnRate: 1 
+    maxPowerUps: 1 
+
+
