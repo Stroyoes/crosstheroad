@@ -118,3 +118,57 @@ button {
     cursor: pointer;
 }
 
+.start-button {
+  --b: 6px;
+  --c: 40px;
+  --g: calc(var(--c) * 0.707);
+
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background: #222;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+
+  border: solid transparent;
+  border-width: var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+  background:
+    linear-gradient(-45deg, transparent var(--g), rgba(255, 255, 255, 0.2) 0) left / var(--c) 100%,
+    linear-gradient(135deg, transparent var(--g), rgba(255, 255, 255, 0.1) 0) bottom / 100% var(--c),
+    conic-gradient(from -90deg at top var(--b) right var(--b), currentColor 270deg, transparent 0),
+    conic-gradient(from 90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)), currentColor 270deg, transparent 0);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+
+  transform: translate(-50%, -50%) translate(calc(var(--c) / -1), calc(var(--c) / 1));
+  clip-path: polygon(
+    var(--c) 0%,
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    100% calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c))
+  );
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transition: 0.4s ease;
+  text-align: center;
+}
+
+.start-button:hover {
+  transform: translate(-50%, -50%) translate(0, 0);
+  clip-path: polygon(
+    0% var(--c),
+    var(--c) 0%,
+    100% 0%,
+    100% calc(100% - var(--c)),
+    calc(100% - var(--c)) 100%,
+    0% 100%,
+    0% 100%
+  );
+}
+

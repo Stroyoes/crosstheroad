@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { metadata as rows } from "./components/Map";
 import { player, position } from "./components/Player";
 import { gameState } from "./utils/GameState"
+import { playSound } from "./utils/Sounds";
 
 const resultDOM = document.getElementById("result-body");
 const finalScoreDOM = document.getElementById("final-score");
@@ -23,12 +24,16 @@ export function hitTest() {
 
         if (playerBoundingBox.intersectsBox(vehicleBoundingBox)) {
           if (!resultDOM || !finalScoreDOM) return;
+
+          playSound("hit");
+
           resultDOM.style.visibility = "visible";
           finalScoreDOM.innerText = position.currentRow.toString();
 
           // Check for maximum score 
           if (gameState.maxScore < position.currentRow.toString()) {
             maxScoreDOM.innerText = position.currentRow.toString();
+            gameState.maxScore = position.currentRow.toString();
           }
         }
       });

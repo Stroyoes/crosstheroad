@@ -1,7 +1,3 @@
-const gameState = {
-  gameOn: true,
+export const gameState = {
   maxScore: 0,
-  sfxStatus: true,
 };
-
-export default gameState;

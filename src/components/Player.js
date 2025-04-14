@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { endsUpInValidPosition } from "../utils/endsUpInValidPosition";
 import { metadata as rows, addRows } from "./Map";
+import { playSound } from "../utils/Sounds";
 
 export const player = Player();
 
@@ -73,6 +74,9 @@ export function queueMove(direction) {
   if (!isValidMove) return;
   
   movesQueue.push(direction);
+
+  playSound("walk");
+
 }
 
 export function stepCompleted() {
