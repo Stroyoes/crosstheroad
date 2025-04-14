@@ -1,7 +1,7 @@
 import { yaml } from 'js-yaml';
 import { fs } from 'fs';
 
-import { log } from './Logger.js';
+import { log } from './Logger';
 
 let config = {};
 
