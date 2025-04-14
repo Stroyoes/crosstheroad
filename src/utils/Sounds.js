@@ -1,7 +1,6 @@
 const sfxs = {
   walk: new Audio("/sounds/walk.wav"),
   traffic: new Audio("/sounds/traffic.wav"),
-  hit: new Audio("/sounds/hit.wav"),
 };
 
 sfxs.traffic.loop = true;

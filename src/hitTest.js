@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { metadata as rows } from "./components/Map";
 import { player, position } from "./components/Player";
 import { gameState } from "./utils/GameState"
-import { playSound } from "./utils/Sounds";
 
 const resultDOM = document.getElementById("result-body");
 const finalScoreDOM = document.getElementById("final-score");
@@ -22,10 +21,8 @@ export function hitTest() {
         const vehicleBoundingBox = new THREE.Box3();
         vehicleBoundingBox.setFromObject(ref);
 
-        if (playerBoundingBox.intersectsBox(vehicleBoundingBox)) {
+        if (playerBoundingBox.intersectsBox(vehicleBoundingBox)) { 
           if (!resultDOM || !finalScoreDOM) return;
-
-          playSound("hit");
 
           resultDOM.style.visibility = "visible";
           finalScoreDOM.innerText = position.currentRow.toString();

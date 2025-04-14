@@ -125,16 +125,16 @@ button {
 
   font-size: 2.5rem;
   font-weight: bold;
-  color: white;
-  background: #222;
+  color: #ddd;
+  background: #111;
   padding: 1rem 2.5rem;
   cursor: pointer;
 
   border: solid transparent;
   border-width: var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
   background:
-    linear-gradient(-45deg, transparent var(--g), rgba(255, 255, 255, 0.2) 0) left / var(--c) 100%,
-    linear-gradient(135deg, transparent var(--g), rgba(255, 255, 255, 0.1) 0) bottom / 100% var(--c),
+    linear-gradient(-45deg, transparent var(--g), rgba(100, 100, 100, 0.2) 0) left / var(--c) 100%,
+    linear-gradient(135deg, transparent var(--g), rgba(100, 100, 100, 0.1) 0) bottom / 100% var(--c),
     conic-gradient(from -90deg at top var(--b) right var(--b), currentColor 270deg, transparent 0),
     conic-gradient(from 90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)), currentColor 270deg, transparent 0);
   background-repeat: no-repeat;
@@ -170,5 +170,7 @@ button {
     0% 100%,
     0% 100%
   );
+  color: white;
+  background: #222;
 }
 
