@@ -2,3 +2,77 @@ body {
   margin: 0;
   display: flex;
 }
+
+#controls div {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+}
+
+#controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 3px solid #000;
+  color: #000;
+  font-size: 36px; /* Big emoji */
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  user-select: none;
+  font-family: Inter, sans-serif;
+  border-radius: 12px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+}
+
+#controls button:hover {
+  border-color: #06f;
+  color: #06f;
+  background-color: #eef4ff;
+}
+
+#controls button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+#forward {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#backward {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#controls {
+  position: fixed; /* Stick to bottom */
+  bottom: 20px; /* 20px above the bottom edge */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Let canvas still receive clicks */
+}
+
+#controls div {
+  pointer-events: all; /* Re-enable buttons */
+}
+
