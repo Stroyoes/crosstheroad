@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { tileSize } from "./constants";
+import { tileSize } from "../constants";
 import { Wheel } from "./Wheel";
 
 export function Car(initialTileIndex, direction, color) {
