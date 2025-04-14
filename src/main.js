@@ -18,10 +18,11 @@ scene.add(ambientLight);
 
 
 const dirLight = DirectionalLight();
-scene.add(dirLight);
+dirLight.target = player;
+player.add(dirLight);
 
 const camera = Camera();
-scene.add(camera);
+player.add(camera);
 
 initializeGame();
 
