@@ -14,28 +14,28 @@ player:
 
 road:
   lanes: 3
-  trafficSpeed: 2
+  trafficSpeed: 100
   vehicleSpawnRate: 1.5 # seconds
 
 levels:
   - id: 1 
     name: "The beginning is easy"
     color: "yellow"
-    trafficSpeed: 1.5
+    trafficSpeed: 55
     vehicleSpawnRate: 2
     maxPowerUps: 3
 
   - id: 2
     name: "Its getting tough"
     color: "cyan"
-    trafficSpeed: 2.5
+    trafficSpeed: 100
     vehicleSpawnRate: 1.5
     maxPowerUps: 2 
 
   - id: 3 
     name: "Its difficult"
     color: "magenta"
-    trafficSpeed: 3.5
+    trafficSpeed: 180
     vehicleSpawnRate: 1 
     maxPowerUps: 1 
 
