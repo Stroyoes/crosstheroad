@@ -1,5 +1,5 @@
 import { calculateFinalPosition } from "./calculateFinalPosition";
-import { minTileIndex, maxTileIndex } from "./constants";
+import { minTileIndex, maxTileIndex } from "../constants";
 import { metadata as rows } from "../components/Map";
 
 export function endsUpInValidPosition(currentPosition, moves) {
