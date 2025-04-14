@@ -23,8 +23,8 @@ export function Tree(tileIndex, height) {
         })
     );
     crown.position.z = height / 2 + 20;
-    body.castShadow = true;
-    body.receiveShadow = true;
+    crown.castShadow = true;
+    crown.receiveShadow = true;
     tree.add(crown);
 
     return tree;
