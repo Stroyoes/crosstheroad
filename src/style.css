@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
   margin: 0;
   display: flex;
+  font-family: "Roboto Mono", monospace;
 }
 
 #controls div {
@@ -75,4 +78,17 @@ body {
 #controls div {
   pointer-events: all; /* Re-enable buttons */
 }
+
+#score-body {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+}
+
+#score {
+  color: cyan;
+}
+
+
 

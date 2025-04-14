@@ -8,15 +8,13 @@ game:
 logger: # Log levels in order: DEBUG < INFO < WARN < ERROR < FATAL
   mode: "dev"  # Set to "dev" for DEBUG+, "user" for INFO+
 
-player:
-  color: "white"
-  speed: 5 
-
 road:
   lanes: 3
   trafficSpeed: 100
   vehicleSpawnRate: 1.5 # seconds
 
+#  INFO:  Level logics not added in current relase
+#  TODO: It will be done in a future release  
 levels:
   - id: 1 
     name: "The beginning is easy"
