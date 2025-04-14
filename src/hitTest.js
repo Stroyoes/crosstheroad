@@ -1,9 +1,11 @@
 import * as THREE from "three";
 import { metadata as rows } from "./components/Map";
 import { player, position } from "./components/Player";
+import { gameState } from "./utils/GameState"
 
 const resultDOM = document.getElementById("result-body");
 const finalScoreDOM = document.getElementById("final-score");
+const maxScoreDOM = document.getElementById("max-score");
 
 export function hitTest() {
     const row = rows[position.currentRow - 1];
@@ -23,6 +25,11 @@ export function hitTest() {
           if (!resultDOM || !finalScoreDOM) return;
           resultDOM.style.visibility = "visible";
           finalScoreDOM.innerText = position.currentRow.toString();
+
+          // Check for maximum score 
+          if (gameState.maxScore < position.currentRow.toString()) {
+            maxScoreDOM.innerText = position.currentRow.toString();
+          }
         }
       });
     }
