@@ -1,6 +1,9 @@
 # Node modules
 node_modules/
 
+# Node build
+dist/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
