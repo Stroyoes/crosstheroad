@@ -39,7 +39,7 @@ function generateForestMetadata() {
 
 function generateCarLaneMetadata() {
   const direction = randomElement([true, false]);
-  const speed = randomElement([125, 156, 188]);
+  const speed = randomElement([125, 156, 188, 160, 190, 200, 110, 67, 21, 23, 34, 95, 186]);
 
   const occupiedTiles = new Set();
 
@@ -65,7 +65,7 @@ function generateCarLaneMetadata() {
 
 function generateTruckLaneMetadata() {
   const direction = randomElement([true, false]);
-  const speed = randomElement([125, 156, 188]);
+  const speed = randomElement([125, 156, 188, 160, 190, 200, 110, 67, 21, 23, 34, 95, 186]);
 
   const occupiedTiles = new Set();
 
